@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id "java"
+    id "eclipse"
+    id "idea"
+    id "maven"
+}
+
+group = "com.vamonossoftware"
+version = "0.0.1-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    testImplementation "org.assertj:assertj-core:3.12.2"
+
+}
+
+//idea {
+//    module {
+//        inheritOutputDirs = false
+//        outputDir = file("$buildDir/classes/main/")
+//        testOutputDir = file("$buildDir/classes/test/")
+//        downloadJavadoc = true
+//        downloadSources = true
+//    }
+//}
