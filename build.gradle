@@ -12,7 +12,7 @@ plugins {
 }
 
 group = "com.vamonossoftware"
-version = "0.0.1-SNAPSHOT"
+version = "0.0.2-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -20,8 +20,15 @@ repositories {
 
 dependencies {
 
-    testImplementation "org.assertj:assertj-core:3.12.2"
+    implementation "org.apache.commons:commons-text:1.6"
+    implementation "commons-io:commons-io:2.6"
+    implementation "com.google.guava:guava:27.0.1-jre"
 
+    implementation "org.assertj:assertj-core:3.12.2"
+    implementation "com.pivovarit:throwing-function:1.5.0"
+
+    testImplementation "org.junit.jupiter:junit-jupiter-engine:5.4.2"
+    
 }
 
 //idea {
