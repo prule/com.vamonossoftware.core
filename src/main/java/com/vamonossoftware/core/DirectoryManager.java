@@ -45,9 +45,14 @@ public class DirectoryManager {
 
     public File writeFile(String fileName, String content) throws IOException {
         File file = new File(directory, fileName);
+        file.getParentFile().mkdirs();
         try (OutputStream os = new FileOutputStream(file)) {
             os.write(content.getBytes());
         }
         return file;
+    }
+
+    public File getFile(String fileName) {
+        return new File(directory, fileName);
     }
 }
