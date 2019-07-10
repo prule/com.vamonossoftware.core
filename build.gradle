@@ -31,12 +31,16 @@ dependencies {
     
 }
 
-//idea {
-//    module {
-//        inheritOutputDirs = false
-//        outputDir = file("$buildDir/classes/main/")
-//        testOutputDir = file("$buildDir/classes/test/")
-//        downloadJavadoc = true
-//        downloadSources = true
-//    }
-//}
+test {
+    useJUnitPlatform() // required for junit 5
+}
+
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = file("$buildDir/classes/main/")
+        testOutputDir = file("$buildDir/classes/test/")
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
